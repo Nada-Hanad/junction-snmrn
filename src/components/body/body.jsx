@@ -1073,7 +1073,7 @@ export default function Body (){
           <Head choices={choices} setChoices={setChoices} symptomsHead={symptomsHead} setSymptomsHead={setSymptomsHead}></Head>
           <Ears choices={choices} setChoices={setChoices} symptomsEars={symptomsEars} setSymptomsEars={setSymptomsEars} ></Ears>
           <Nose choices={choices} setChoices={setChoices} symptomsNose={symptomsNose} setSymptomsNose={setSymptomsNose}></Nose>
-          <Eyes choices={choices} setChoices={setChoices} symptomsLowerEyes={symptomsLowerEyes} setSymptomsLowerEyes={setSymptomsLowerEyes}></Eyes>
+          <Eyes choices={choices} setChoices={setChoices} symptomsLowerEyes={symptomsEyes} setSymptomsLowerEyes={setSymptomsEyes}></Eyes>
           <Mouth></Mouth>
           <Neck choices={choices} setChoices={setChoices} symptomsNeck={symptomsNeck} setSymptomsNeck={setSymptomsNeck}></Neck>
           <UpperArm></UpperArm>
