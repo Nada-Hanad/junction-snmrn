@@ -1073,7 +1073,7 @@ export default function Body (){
           <Head choices={choices} setChoices={setChoices} symptomsHead={symptomsHead} setSymptomsHead={setSymptomsHead}></Head>
           <Ears choices={choices} setChoices={setChoices} symptomsEars={symptomsEars} setSymptomsEars={setSymptomsEars} ></Ears>
           <Nose choices={choices} setChoices={setChoices} symptomsNose={symptomsNose} setSymptomsNose={setSymptomsNose}></Nose>
-          <Eyes choices={choices} setChoices={setChoices} symptomsLowerEyes={symptomsEyes} setSymptomsLowerEyes={setSymptomsEyes}></Eyes>
+          <Eyes choices={choices} setChoices={setChoices} symptomsEyes={symptomsEyes} setSymptomsEyes={setSymptomsEyes}></Eyes>
           <Mouth></Mouth>
           <Neck choices={choices} setChoices={setChoices} symptomsNeck={symptomsNeck} setSymptomsNeck={setSymptomsNeck}></Neck>
           <UpperArm></UpperArm>
@@ -1082,7 +1082,7 @@ export default function Body (){
           <UpperAbdomen></UpperAbdomen>
           <Boobs choices={choices} setChoices={setChoices} symptomsBoobs={symptomsBoobs} setSymptomsBoobs={setSymptomsBoobs}></Boobs>
           <Abdomen></Abdomen>
-          <Hands choices={choices} setChoices={setChoices} symptomsHead={symptomsHead} setSymptomsHead={setSymptomsHead}></Hands>
+          <Hands choices={choices} setChoices={setChoices} symptomsHands={symptomsHands} setSymptomsHands={setSymptomsHands}></Hands>
           <Thighs></Thighs>
           <LowerAbdomen></LowerAbdomen>
           <Shit></Shit>

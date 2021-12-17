@@ -39,12 +39,12 @@ export default function Hands({choices,setChoices, symptomsHands, setSymptomsHan
    sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
    aria-label="contacts"
  >
-     {symptomsBoobs.map((e)=>{
+     {symptomsHands.map((e)=>{
          return(
              <ListItem disablePadding>
      <ListItemButton onClick={()=>{
-         setSymptomsBoobs(
-             symptomsBoobs.filter(item => item.name !== e.name)
+         setSymptomsHands(
+             symptomsHands.filter(item => item.name !== e.name)
          )
          setChoices([...choices, e])
     

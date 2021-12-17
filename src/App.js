@@ -1,10 +1,9 @@
 import './App.css';
-import BodyPage from './components/bodyPage/bodyPage';
-
+import Body from './components/body/body';
 function App() {
   return (
     <div className='main'>
-      <BodyPage></BodyPage>
+      <Body></Body>
     </div>
   );
 }
