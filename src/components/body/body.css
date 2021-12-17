@@ -1,0 +1,121 @@
+.body-part-front{
+    height:1258px;
+    width:604px;
+    background-image: url('../../assets/body.png');
+    }
+    .body-part-back{
+      height:1258px;
+      width:604px;
+      background-image: url('../../assets/backBody.png');
+      }
+  svg:hover{
+    fill: rgba(71,71,71, 0.3  );
+  }
+  .head{
+    position: relative;
+    left:228px;
+  }
+  .eyes{
+    position: relative;
+    top: -85px;
+    left: -62px;
+  }
+  .ears{
+    position: relative;
+    top:-40px;
+    left: 80px;
+  }
+  .nose {
+    position: relative;
+    top:-65px;
+    left: -7px;
+  
+  }
+  .mouth{
+    position: relative;
+    top:-25px;
+    left: -145px;
+  }
+  .neck{
+    position: relative;
+    top: 27px;
+    left:-235px
+  }
+  .upper-chest{
+    position: relative;
+    top: -215px;
+    left: 170px;
+  }
+  .upper-arm{
+    position: relative;
+    top: 45px;
+    left: 105px;
+  }
+  .boobs{
+    position: relative;
+    top: -410px;
+    left: 2px;
+  }
+  .lower-arm{
+    position: relative;
+    top: -109px;
+    left: 58px;
+  }
+  .upper-abdomen{
+    position: relative;
+    top:-355px;
+    left: 203px;
+  }
+  .abdomen{
+    position: relative;
+    top: -360px;
+    left: 190px;
+  }
+  .lower-abdomen{
+    position: relative;
+    top: -715px;
+    left: -73px;
+  }
+  .hands{
+    position: relative;
+    top: -332px;
+    left: 2px;
+  }
+  .thighs{
+    position: relative;
+    top: -460px;
+    left: 173px;
+  }
+  .shit{
+    position: relative;
+    top: -658px;
+    left: -226px;
+  }
+  .knees{
+    position: relative;
+    top: -610px;
+    left: 182px;
+  }
+  .lower-legs{
+    position: relative;
+    top: -410px;
+    left: -85px;
+  }
+  .feet{
+    position: relative;
+    top: -415px;
+    left: 152px;
+  }
+  .back{
+    position: relative;
+    top: 210px;
+    left: 180px;
+  }
+  .lower-back{
+    position: relative;
+    top: 324px;
+    left: -65px;
+  }
+  .ass{
+    position: relative;
+  }
