@@ -1,4 +1,3 @@
-import { useState } from "react";
 import * as React from 'react';
 import Popover from '@mui/material/Popover';
 import List from '@mui/material/List';
@@ -7,7 +6,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 
 
-export default function Head({choices,setChoices}) {
+export default function Head({choices,setChoices, symptomsHead, setSymptomsHead}) {
   
     const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -22,121 +21,7 @@ export default function Head({choices,setChoices}) {
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
   
-    const [symptoms, setSymptoms] = useState([
-        {
-            "id": "s_21",
-            "name": "Headache",
-            "common_name": "Headache",
-            "orth": "Headache",
-            "choice_id": "present",
-            "type": "symptom"
-        },
-        {
-            "id": "s_478",
-            "name": "Facial pain",
-            "common_name": "Facial pain",
-            "orth": "Face pain",
-            "choice_id": "present",
-            "type": "symptom"
-        },
-        {
-            "id": "s_1436",
-            "name": "Facial pain, paranasal sinus",
-            "common_name": "Sinus pain or pressure",
-            "orth": "Sinus pain or pressure",
-            "choice_id": "present",
-            "type": "symptom"
-        },
-        {
-            "id": "s_98",
-            "name": "Fever",
-            "common_name": "Fever",
-            "orth": "Fever",
-            "choice_id": "present",
-            "type": "symptom"
-        },
-        {
-            "id": "s_616",
-            "name": "Edema, face",
-            "common_name": "Face swelling",
-            "orth": "Swollen face",
-            "choice_id": "present",
-            "type": "symptom"
-        },
-        {
-            "id": "s_1156",
-            "name": "Facial muscle paresis",
-            "common_name": "Facial muscle weakness",
-            "orth": "Facial muscle weakness",
-            "choice_id": "present",
-            "type": "symptom"
-        },
-        {
-            "id": "s_971",
-            "name": "Paresthesia, face",
-            "common_name": "Face numbness",
-            "orth": "Face numbness",
-            "choice_id": "present",
-            "type": "symptom"
-        },
-        {
-            "id": "s_1543",
-            "name": "Loss of consciousness",
-            "common_name": "Loss of consciousness",
-            "orth": "Loss of consciousness",
-            "choice_id": "present",
-            "type": "symptom"
-        },
-        {
-            "id": "s_316",
-            "name": "Impaired memory",
-            "common_name": "Impaired memory",
-            "orth": "Impaired memory",
-            "choice_id": "present",
-            "type": "symptom"
-        },
-        {
-            "id": "s_370",
-            "name": "Dizziness",
-            "common_name": "Dizzy",
-            "orth": "Dizzy",
-            "choice_id": "present",
-            "type": "symptom"
-        },
-        {
-            "id": "s_156",
-            "name": "Nausea",
-            "common_name": "Feeling sick",
-            "orth": "Feeling sick",
-            "choice_id": "present",
-            "type": "symptom"
-        },
-        {
-            "id": "s_121",
-            "name": "Hair loss",
-            "common_name": "Hair loss",
-            "orth": "Hair loss",
-            "choice_id": "present",
-            "type": "symptom"
-        },
-        {
-            "id": "s_1808",
-            "name": "Dermatological changes, located on the face",
-            "common_name": "Skin changes located on the face",
-            "orth": "Skin changes located on the face",
-            "choice_id": "present",
-            "type": "symptom"
-        },
-        {
-            "id": "p_232",
-            "name": "Recent head injury",
-            "common_name": "Recent head injury",
-            "orth": "Recent head injury",
-            "choice_id": "present",
-            "type": "risk_factor"
-        }
-
-    ]);
+    
     return (
 
         <>
@@ -159,14 +44,12 @@ export default function Head({choices,setChoices}) {
       sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
       aria-label="contacts"
     >
-        {symptoms.map((e)=>{
+        {symptomsHead.map((e)=>{
             return(
-                <ListItem sx={{
-            fontSize:50
-            }} disablePadding>
+                <ListItem disablePadding>
         <ListItemButton onClick={()=>{
-            setSymptoms(
-                symptoms.filter(item => item.name !== e.name)
+            setSymptomsHead(
+                symptomsHead.filter(item => item.name !== e.name)
             )
             setChoices([...choices, e])
        
