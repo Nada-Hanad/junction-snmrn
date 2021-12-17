@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Montez&family=Pacifico&family=Poppins:wght@200&display=swap');
+.body-page{
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+  
+}
+.upper-body-page{
+    padding: 6vh;
+    height: 1vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Montez', cursive;
+
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
