@@ -26,6 +26,1166 @@ export default function Body (){
     const [turned, setTurned] = useState(false);
     const [choices, setChoices] = useState([]);
 
+
+    const [symptomsShit, setSymptomsShit] = useState([
+        {
+            "id": "s_328",
+            "name": "Abnormal vaginal discharge",
+            "common_name": "Abnormal vaginal discharge",
+            "orth": "Abnormal vaginal discharge",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_152",
+            "name": "Bleeding after intercourse",
+            "common_name": "Bleeding after intercourse",
+            "orth": "Bleeding after intercourse",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_32",
+            "name": "Painful intercourse",
+            "common_name": "Painful sex",
+            "orth": "Painful sex",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_59",
+            "name": "Dysmenorrhea",
+            "common_name": "Painful menstrual periods",
+            "orth": "Painful periods",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_158",
+            "name": "Heavy or prolonged menstrual periods",
+            "common_name": "Heavy or prolonged menstrual periods",
+            "orth": "Heavy periods",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1457",
+            "name": "Amenorrhea",
+            "common_name": "Absence of menstrual period",
+            "orth": "Absence of menstrual period",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1440",
+            "name": "Irregular menstruations",
+            "common_name": "Irregular menstruations",
+            "orth": "Irregular periods",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1999",
+            "name": "Erythema, vulva",
+            "common_name": "Redness of vulva",
+            "orth": "Reddened vulva",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_215",
+            "name": "Frequent urination",
+            "common_name": "Frequent urination",
+            "orth": "Frequent urination",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_39",
+            "name": "Pain while urinating",
+            "common_name": "Pain while urinating",
+            "orth": "Pain while urinating",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_611",
+            "name": "Dark urine",
+            "common_name": "Dark urine",
+            "orth": "Dark urine",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_113",
+            "name": "Blood in urine",
+            "common_name": "Blood in urine",
+            "orth": "Red urine",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_153",
+            "name": "Urinary incontinence",
+            "common_name": "Urinary incontinence",
+            "orth": "Urinary incontinence",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_182",
+            "name": "Nocturia",
+            "common_name": "Urinating at night",
+            "orth": "urinating at night",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_75",
+            "name": "Frequent urination, large quantities",
+            "common_name": "Frequent urination in large quantities",
+            "orth": "Often urinating",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_253",
+            "name": "Itching in crotch",
+            "common_name": "Genital itch",
+            "orth": "Itching in crotch",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_690",
+            "name": "Urinary urgency",
+            "common_name": "Urgent need to urinate",
+            "orth": "Urgent need to urinate",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_689",
+            "name": "Urination in small amounts",
+            "common_name": "Urination in small amounts",
+            "orth": "Urination in small amounts",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1810",
+            "name": "Dermatological changes, located in the genital area",
+            "common_name": "Dermatological changes, located in the genital area",
+            "orth": "Skin changes around genitals",
+            "choice_id": "present",
+            "type": "symptom"
+        }
+    ].sort(function(a, b){
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+      }));
+
+
+
+
+    const [symptomsAbdomen, setSymptomsAbdomen] = useState([
+        {
+            "id": "s_17",
+            "name": "Abdominal pain, premenstrual",
+            "common_name": "Cramps before period",
+            "orth": "Cramps before period",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_13",
+            "name": "Abdominal pain",
+            "common_name": "Stomach pain",
+            "orth": "Stomach pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1802",
+            "name": "Abdominal pain, burning or gnawing",
+            "common_name": "Burning or gnawing stomach pain",
+            "orth": "Burning or gnawing stomach pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1848",
+            "name": "Abdominal pain, colicky",
+            "common_name": "Colic stomach pain",
+            "orth": "Colic stomach pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1860",
+            "name": "Abdominal pain, crampy",
+            "common_name": "Crampy stomach pain",
+            "orth": "Crampy stomach pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1369",
+            "name": "Abdominal pain, sharp and stabbing",
+            "common_name": "Sharp and stabbing stomach pain",
+            "orth": "Sharp and stabbing stomach pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_241",
+            "name": "Dermatological changes",
+            "common_name": "Skin changes",
+            "orth": "Lump",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_277",
+            "name": "Increased abdominal girth",
+            "common_name": "Increased abdominal size",
+            "orth": "Increased abdominal size",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_309",
+            "name": "Bloating",
+            "common_name": "Bloating",
+            "orth": "Bloating",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_329",
+            "name": "Constipation",
+            "common_name": "Constipation",
+            "orth": "Constipation",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_8",
+            "name": "Diarrhea",
+            "common_name": "Diarrhea",
+            "orth": "Diarrhea",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_305",
+            "name": "Vomiting",
+            "common_name": "Vomiting",
+            "orth": "Vomiting",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_156",
+            "name": "Nausea",
+            "common_name": "Feeling sick",
+            "orth": "Feeling sick",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_71",
+            "name": "Black stools",
+            "common_name": "Black stools",
+            "orth": "Black stools",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "p_144",
+            "name": "Abdominal injury",
+            "common_name": "Recent abdominal injury",
+            "orth": "Recent abdominal injury",
+            "choice_id": "present",
+            "type": "risk_factor"
+        }
+    ].sort(function(a, b){
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+      }));
+
+
+    const [symptomsLowerArm, setSymptomsLowerArm] = useState([
+        {
+            "id": "s_580",
+            "name": "Pain in upper limb",
+            "common_name": "Pain in upper limb",
+            "orth": "Pain in upper limb",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1452",
+            "name": "Pain in both upper limbs",
+            "common_name": "Pain in both upper limbs",
+            "orth": "Pain in forearm",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1935",
+            "name": "Pain in upper limb, severe",
+            "common_name": "Severe pain in upper limb",
+            "orth": "Severe pain in upper limb",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1447",
+            "name": "Edema, upper limb",
+            "common_name": "Swelling of the upper limb",
+            "orth": "Swelling of the upper limb",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1635",
+            "name": "Edema, elbow joint",
+            "common_name": "Elbow swelling",
+            "orth": "Swollen elbow",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1431",
+            "name": "Edema, wrist joint",
+            "common_name": "Swollen wrist",
+            "orth": "Swollen wrist",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1430",
+            "name": "Joint pain, wrist",
+            "common_name": "Wrist pain",
+            "orth": "Wrist pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1636",
+            "name": "Joint pain, during wrist movement",
+            "common_name": "Wrist pain while moving",
+            "orth": "Pain when moving wrist",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1632",
+            "name": "Joint pain, elbow",
+            "common_name": "Elbow pain",
+            "orth": "Elbow pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1634",
+            "name": "Joint pain, during elbow movement",
+            "common_name": "Elbow pain while moving",
+            "orth": "Pain when moving elbow",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_973",
+            "name": "Paresthesia, both upper limbs",
+            "common_name": "Numbness of both upper limbs",
+            "orth": "Numbness of both upper limbs",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_972",
+            "name": "Sensory loss in both arms",
+            "common_name": "Loss of feeling in both arms",
+            "orth": "Loss of feeling in both arms",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1426",
+            "name": "Spasms in upper extremities",
+            "common_name": "Spasms in upper extremities",
+            "orth": "Spasms in upper extremities",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "p_252",
+            "name": "Forearm injury",
+            "common_name": "Forearm injury",
+            "orth": "Forearm injury",
+            "choice_id": "present",
+            "type": "risk_factor"
+        }
+    ].sort(function(a, b){
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+      }));
+
+
+    const [symptomsUpperArm, setSymptomsUpperArm] = useState([
+        {
+            "id": "s_580",
+            "name": "Pain in upper limb",
+            "common_name": "Pain in upper limb",
+            "orth": "Pain in upper limb",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1935",
+            "name": "Pain in upper limb, severe",
+            "common_name": "Severe pain in upper limb",
+            "orth": "Severe pain in upper limb",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1654",
+            "name": "Joint pain, shoulder",
+            "common_name": "Shoulder pain",
+            "orth": "Shoulder pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1805",
+            "name": "Joint pain, during shoulder movement",
+            "common_name": "Shoulder pain while moving",
+            "orth": "Pain when moving shoulder",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1713",
+            "name": "Restricted range of joint motion",
+            "common_name": "Restricted range of joint motion",
+            "orth": "Restricted range of joint motion",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1452",
+            "name": "Pain in both upper limbs",
+            "common_name": "Pain in both upper limbs",
+            "orth": "Pain in both upper limbs",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1447",
+            "name": "Edema, upper limb",
+            "common_name": "Swelling of the upper limb",
+            "orth": "Swelling of the upper limb",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1655",
+            "name": "Edema, shoulder joint",
+            "common_name": "Shoulder swelling",
+            "orth": "Swollen shoulder",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1449",
+            "name": "Paresthesia, one upper limb",
+            "common_name": "Numbness of one upper limb",
+            "orth": "Numbness of one upper limb",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_973",
+            "name": "Paresthesia, both upper limbs",
+            "common_name": "Numbness of both upper limbs",
+            "orth": "Numbness of both upper limbs",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_972",
+            "name": "Sensory loss in both arms",
+            "common_name": "Loss of feeling in both arms",
+            "orth": "Loss of feeling in both arms",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1426",
+            "name": "Spasms in upper extremities",
+            "common_name": "Spasms in upper extremities",
+            "orth": "Spasms in upper extremities",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "p_254",
+            "name": "Arm injury",
+            "common_name": "Arm injury",
+            "orth": "Arm injury",
+            "choice_id": "present",
+            "type": "risk_factor"
+        }
+    ].sort(function(a, b){
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+      }));
+
+
+
+    const [symptomsUpperChest, setSymptomsUpperChest] = useState([
+        {
+            "id": "s_50",
+            "name": "Chest pain",
+            "common_name": "Chest pain",
+            "orth": "Chest pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_2074",
+            "name": "Chest pain, radiating to left upper limb",
+            "common_name": "Chest pain, spreading  to the left upper limb",
+            "orth": "Chest pain spreading to left upper limb",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1925",
+            "name": "Chest pain, pressure",
+            "common_name": "Pressing chest pain",
+            "orth": "Pressing chest pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_338",
+            "name": "Heartburn",
+            "common_name": "Heartburn",
+            "orth": "Heartburn",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_110",
+            "name": "Palpitations",
+            "common_name": "Palpitations",
+            "orth": "Palpitations",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_261",
+            "name": "Tachycardia",
+            "common_name": "Fast heartbeat",
+            "orth": "Fast heartbeat",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_534",
+            "name": "Bradycardia",
+            "common_name": "Slow heart rate",
+            "orth": "Slow heart rate",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_102",
+            "name": "Cough",
+            "common_name": "Cough",
+            "orth": "Cough",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_88",
+            "name": "Dyspnea",
+            "common_name": "Shortness of breath",
+            "orth": "Shortness of breath",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1462",
+            "name": "Shallow breathing",
+            "common_name": "Shallow breathing",
+            "orth": "Shallow breathing",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_227",
+            "name": "Tachypnea",
+            "common_name": "Accelerated breathing",
+            "orth": "Accelerated breathing",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_474",
+            "name": "Wheezing, audible",
+            "common_name": "Whistling sound made while breathing",
+            "orth": "Whistling sound made while breathing",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "p_136",
+            "name": "Chest injury",
+            "common_name": "Chest injury",
+            "orth": "Chest injury",
+            "choice_id": "present",
+            "type": "risk_factor"
+        }
+    ].sort(function(a, b){
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+      }));
+
+
+    const [symptomsUpperAbdomen, setSymptomsUpperAbdomen] = useState([
+        {
+            "id": "s_13",
+            "name": "Abdominal pain",
+            "common_name": "Stomach pain",
+            "orth": "Stomach pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1387",
+            "name": "Abdominal pain, epigastric",
+            "common_name": "Upper central stomach pain",
+            "orth": "Upper central stomach pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1591",
+            "name": "Abdominal pain, left upper quadrant",
+            "common_name": "Upper left side stomach pain",
+            "orth": "Upper left side stomach pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1528",
+            "name": "Abdominal pain, right upper quadrant",
+            "common_name": "Upper right side stomach pain",
+            "orth": "Upper right side stomach pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1802",
+            "name": "Abdominal pain, burning or gnawing",
+            "common_name": "Burning or gnawing stomach pain",
+            "orth": "Burning or gnawing stomach pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1848",
+            "name": "Abdominal pain, colicky",
+            "common_name": "Colic stomach pain",
+            "orth": "Colic stomach pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1860",
+            "name": "Abdominal pain, crampy",
+            "common_name": "Crampy stomach pain",
+            "orth": "Crampy stomach pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1369",
+            "name": "Abdominal pain, sharp and stabbing",
+            "common_name": "Sharp and stabbing stomach pain",
+            "orth": "Sharp and stabbing stomach pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_338",
+            "name": "Heartburn",
+            "common_name": "Heartburn",
+            "orth": "Heartburn",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_241",
+            "name": "Dermatological changes",
+            "common_name": "Skin changes",
+            "orth": "Lump",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_277",
+            "name": "Increased abdominal girth",
+            "common_name": "Increased abdominal size",
+            "orth": "Increased abdominal size",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_309",
+            "name": "Bloating",
+            "common_name": "Bloating",
+            "orth": "Bloating",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_305",
+            "name": "Vomiting",
+            "common_name": "Vomiting",
+            "orth": "Vomiting",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_156",
+            "name": "Nausea",
+            "common_name": "Feeling sick",
+            "orth": "Feeling sick",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1432",
+            "name": "Dyspepsia",
+            "common_name": "Indigestion",
+            "orth": "Indigestion",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_306",
+            "name": "Hematemesis",
+            "common_name": "Vomiting blood",
+            "orth": "Vomiting blood",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_285",
+            "name": "Weight loss",
+            "common_name": "Weight reduction",
+            "orth": "Weight loss",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "p_144",
+            "name": "Abdominal injury",
+            "common_name": "Recent abdominal injury",
+            "orth": "Recent abdominal injury",
+            "choice_id": "present",
+            "type": "risk_factor"
+        }
+    ].sort(function(a, b){
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+      }));
+
+    const [symptomsThighs, setSymptomsThighs] = useState([
+        {
+            "id": "s_579",
+            "name": "Pain in lower limb",
+            "common_name": "Pain in lower limb",
+            "orth": "Pain in lower limb",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1930",
+            "name": "Pain in lower limb, severe",
+            "common_name": "Severe pain in lower limb",
+            "orth": "Severe pain in lower limb",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1893",
+            "name": "Pain in lower limb, thigh",
+            "common_name": "Thigh pain",
+            "orth": "Thigh pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1453",
+            "name": "Pain in both lower limbs",
+            "common_name": "Pain in both lower limbs",
+            "orth": "Pain in both lower limbs",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_11",
+            "name": "Joint pain, hip",
+            "common_name": "Joint pain, hip",
+            "orth": "Hip pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_53",
+            "name": "Back pain, lumbar",
+            "common_name": "Lower-back pain",
+            "orth": "Lower back pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1927",
+            "name": "Limping due to pain",
+            "common_name": "Limping due to pain",
+            "orth": "Limping due to pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_734",
+            "name": "Claudication in upper leg",
+            "common_name": "Acute thigh or buttock pain appearing during exertion and relieving after short rest",
+            "orth": "Acute thigh or buttock pain appearing during exertion and relieving after short rest",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_173",
+            "name": "Edema, one lower limb",
+            "common_name": "Swollen leg",
+            "orth": "Swollen leg",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1652",
+            "name": "Edema, hip joint",
+            "common_name": "Hip swelling",
+            "orth": "Hip swelling",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_175",
+            "name": "Edema, both lower limbs",
+            "common_name": "Swollen legs",
+            "orth": "Swollen legs",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_2001",
+            "name": "Paresthesia, one lower limb",
+            "common_name": "Numbness in one lower limb",
+            "orth": "Numbness in one lower limb",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1063",
+            "name": "Paresthesia, both lower limbs",
+            "common_name": "Numbness of both lower limbs",
+            "orth": "Numbness of both lower limbs",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_73",
+            "name": "Red stretch marks on abdomen, hips or thighs",
+            "common_name": "Red stretch marks on abdomen, hips or thighs",
+            "orth": "Red stretch marks on stomach",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "p_248",
+            "name": "Thigh injury",
+            "common_name": "Thigh injury",
+            "orth": "injury thighs Thigh",
+            "choice_id": "present",
+            "type": "risk_factor"
+        }
+    ].sort(function(a, b){
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+      }));
+
+
+    const [symptomsMouth, setSymptomsMouth] = useState([
+        {
+            "id": "s_241",
+            "name": "Dermatological changes",
+            "common_name": "Skin changes",
+            "orth": "Dermatological changes",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_65",
+            "name": "Halitosis",
+            "common_name": "Bad breath",
+            "orth": "Bad breath",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_247",
+            "name": "Dry mouth",
+            "common_name": "Dry mouth",
+            "orth": "Dry mouth",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_551",
+            "name": "Toothache",
+            "common_name": "Toothache",
+            "orth": "Toothache",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_266",
+            "name": "Difficulty biting and chewing",
+            "common_name": "Difficulty biting and chewing",
+            "orth": "Difficulty biting and chewing",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_19",
+            "name": "Gum pain",
+            "common_name": "Gum pain",
+            "orth": "Gum pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_172",
+            "name": "Swollen gums",
+            "common_name": "Swollen gums",
+            "orth": "Swollen gums",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_111",
+            "name": "Bleeding gums",
+            "common_name": "Bleeding gums",
+            "orth": "Bleeding gums",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_607",
+            "name": "Tongue erythema",
+            "common_name": "Unusually red tongue",
+            "orth": "Unusually red tongue",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "p_234",
+            "name": "Burn",
+            "common_name": "Burn",
+            "orth": "Burning",
+            "choice_id": "present",
+            "type": "risk_factor"
+        },
+        {
+            "id": "s_102",
+            "name": "Cough",
+            "common_name": "Cough",
+            "orth": "Cough",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_67",
+            "name": "Snoring",
+            "common_name": "Snoring",
+            "orth": "Snoring",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_305",
+            "name": "Vomiting",
+            "common_name": "Vomiting",
+            "orth": "Vomiting",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_116",
+            "name": "Hemoptysis",
+            "common_name": "Coughing up blood",
+            "orth": "Coughing up blood",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_284",
+            "name": "Diminished appetite",
+            "common_name": "Diminished appetite",
+            "orth": "Diminished appetite",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_310",
+            "name": "Increased thirst",
+            "common_name": "Increased thirst",
+            "orth": "Increased thirst",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_610",
+            "name": "Coated tonsils",
+            "common_name": "White spots on tonsils",
+            "orth": "White spots on tonsils",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_88",
+            "name": "Dyspnea",
+            "common_name": "Shortness of breath",
+            "orth": "Shortness of breath",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "p_282",
+            "name": "Lip injury",
+            "common_name": "Lip injury",
+            "orth": "Lip injury",
+            "choice_id": "present",
+            "type": "risk_factor"
+        }
+    ].sort(function(a, b){
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+      }));
+    const [symptomsKnees, setSymptomsKnees] = useState([
+        {
+            "id": "s_579",
+            "name": "Pain in lower limb",
+            "common_name": "Pain in lower limb",
+            "orth": "Pain in lower limb",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1930",
+            "name": "Pain in lower limb, severe",
+            "common_name": "Severe pain in lower limb",
+            "orth": "Severe pain in lower limb",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1453",
+            "name": "Pain in both lower limbs",
+            "common_name": "Pain in both lower limbs",
+            "orth": "Pain in both lower limbs",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_581",
+            "name": "Joint pain, knee",
+            "common_name": "Knee pain",
+            "orth": "Knee pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_575",
+            "name": "Joint stiffness",
+            "common_name": "Stiff joints",
+            "orth": "Stiff joints",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1927",
+            "name": "Limping due to pain",
+            "common_name": "Limping due to pain",
+            "orth": "Limping due to pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_170",
+            "name": "Edema, knee joint",
+            "common_name": "Swollen knee",
+            "orth": "Swollen knee",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_238",
+            "name": "Slower gait",
+            "common_name": "Slower walk",
+            "orth": "Slower walk",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_270",
+            "name": "Creaking of joint during movement",
+            "common_name": "Creaking of joint during movement",
+            "orth": "Creaking joints",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "p_244",
+            "name": "Knee injury",
+            "common_name": "Knee injury",
+            "orth": "Knee injury",
+            "choice_id": "present",
+            "type": "risk_factor"
+        }
+    ].sort(function(a, b){
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+      }));
+
     const [symptomsHands, setSymptomsHands] = useState([
         {
             "id": "s_1430",
@@ -1074,19 +2234,19 @@ export default function Body (){
           <Ears choices={choices} setChoices={setChoices} symptomsEars={symptomsEars} setSymptomsEars={setSymptomsEars} ></Ears>
           <Nose choices={choices} setChoices={setChoices} symptomsNose={symptomsNose} setSymptomsNose={setSymptomsNose}></Nose>
           <Eyes choices={choices} setChoices={setChoices} symptomsEyes={symptomsEyes} setSymptomsEyes={setSymptomsEyes}></Eyes>
-          <Mouth></Mouth>
+          <Mouth choices={choices} setChoices={setChoices} symptomsMouth={symptomsMouth} setSymptomsMouth={setSymptomsMouth}></Mouth>
           <Neck choices={choices} setChoices={setChoices} symptomsNeck={symptomsNeck} setSymptomsNeck={setSymptomsNeck}></Neck>
-          <UpperArm></UpperArm>
-          <UpperChest></UpperChest>
-          <LowerArm></LowerArm>
-          <UpperAbdomen></UpperAbdomen>
+          <UpperArm choices={choices} setChoices={setChoices} symptomsUpperArm={symptomsUpperArm} setSymptomsUpperArm={setSymptomsUpperArm}></UpperArm>
+          <UpperChest choices={choices} setChoices={setChoices} symptomsUpperChest={symptomsUpperChest} setSymptomsUpperChest={setSymptomsUpperChest}></UpperChest>
+          <LowerArm choices={choices} setChoices={setChoices} symptomsLowerArm={symptomsLowerArm} setSymptomsLowerArm={setSymptomsLowerArm}></LowerArm>
+          <UpperAbdomen choices={choices} setChoices={setChoices} symptomsUpperAbdomen={symptomsUpperAbdomen} setSymptomsUpperAbdomen={setSymptomsBoobs}></UpperAbdomen>
           <Boobs choices={choices} setChoices={setChoices} symptomsBoobs={symptomsBoobs} setSymptomsBoobs={setSymptomsBoobs}></Boobs>
-          <Abdomen></Abdomen>
+          <Abdomen choices={choices} setChoices={setChoices} symptomsAbdomen={symptomsAbdomen} setSymptomsAbdomen={setSymptomsAbdomen}></Abdomen>
           <Hands choices={choices} setChoices={setChoices} symptomsHands={symptomsHands} setSymptomsHands={setSymptomsHands}></Hands>
-          <Thighs></Thighs>
+          <Thighs choices={choices} setChoices={setChoices} symptomsThighs={symptomsThighs} setSymptomsThighs={setSymptomsThighs}></Thighs>
           <LowerAbdomen></LowerAbdomen>
-          <Shit></Shit>
-          <Knees></Knees>
+          <Shit choices={choices} setChoices={setChoices} symptomsShit={symptomsShit} setSymptomsShit={setSymptomsShit}></Shit>
+          <Knees choices={choices} setChoices={setChoices} symptomsKnees={symptomsKnees} setSymptomsKnees={setSymptomsKnees}></Knees>
           <LowerLegs choices={choices} setChoices={setChoices} symptomsLowerLegs={symptomsLowerLegs} setSymptomsLowerLegs={setSymptomsLowerLegs}></LowerLegs>
           <Feet choices={choices} setChoices={setChoices} symptomsFeet={symptomsFeet} setSymptomsFeet={setSymptomsFeet}></Feet>
         </div>
