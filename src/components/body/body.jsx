@@ -26,6 +26,459 @@ export default function Body (){
     const [turned, setTurned] = useState(false);
     const [choices, setChoices] = useState([]);
 
+    const [symptomsHands, setSymptomsHands] = useState([
+        {
+            "id": "s_1430",
+            "name": "Joint pain, wrist",
+            "common_name": "Wrist pain",
+            "orth": "Wrist pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1636",
+            "name": "Joint pain, during wrist movement",
+            "common_name": "Wrist pain while moving",
+            "orth": "Pain when moving wrist",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_554",
+            "name": "Pain in fingers or hand",
+            "common_name": "Pain in fingers or hand",
+            "orth": "Pain in fingers or hand",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1313",
+            "name": "One finger pain",
+            "common_name": "One finger pain",
+            "orth": "One finger pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1312",
+            "name": "Perionychial pain",
+            "common_name": "Pain of the skin around the nail",
+            "orth": "Pain of the skin around the nail",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1464",
+            "name": "Edema, one hand",
+            "common_name": "Hand swelling",
+            "orth": "hand Swollen",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_2093",
+            "name": "Edema, both hands",
+            "common_name": "Swelling of both hands",
+            "orth": "Swollen hand",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1311",
+            "name": "Edema, finger",
+            "common_name": "Finger swelling",
+            "orth": "Swollen finger",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1982",
+            "name": "Dermatological changes, hands",
+            "common_name": "Skin changes on hands",
+            "orth": "Skin changes on hands",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_557",
+            "name": "Erythema, hand",
+            "common_name": "Red hand",
+            "orth": "Red hand",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_553",
+            "name": "Cyanosis, fingers",
+            "common_name": "Pale or grayish-blue fingers",
+            "orth": "Grayish - blue fingers",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1125",
+            "name": "Erythema, palmar",
+            "common_name": "Red skin on palms",
+            "orth": "Red skin on palms",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_555",
+            "name": "Tingling fingers",
+            "common_name": "Tingling fingers",
+            "orth": "Tingling fingers",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_87",
+            "name": "Tremors, both hands",
+            "common_name": "Trembling of both hands",
+            "orth": "Trembling of both hands",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_86",
+            "name": "Tremors, in one hand",
+            "common_name": "Trembling of one hand",
+            "orth": "Trembling of one hand",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_564",
+            "name": "Loss of muscle mass, hands",
+            "common_name": "Loss of muscles in hands",
+            "orth": "Loss of muscles in hands",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_556",
+            "name": "Cold hands or fingers",
+            "common_name": "Cold hands or fingers",
+            "orth": "Cold hands or fingers",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "p_250",
+            "name": "Hand injury",
+            "common_name": "Hand injury",
+            "orth": "Hand injury",
+            "choice_id": "present",
+            "type": "risk_factor"
+        }
+    ].sort(function(a, b){
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+      }));
+
+    const [symptomsFeet, setSymptomsFeet] = useState([
+        {
+            "id": "s_578",
+            "name": "Pain in one foot",
+            "common_name": "Foot pain",
+            "orth": "Foot pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1833",
+            "name": "Toe pain",
+            "common_name": "Toe pain",
+            "orth": "Toe pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_2005",
+            "name": "Nail pain",
+            "common_name": "Sore nail",
+            "orth": "Sore nail",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1312",
+            "name": "Perionychial pain",
+            "common_name": "Pain of the skin around the nail",
+            "orth": "Pain of the skin around the nail",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1621",
+            "name": "Joint pain, ankle",
+            "common_name": "Ankle pain",
+            "orth": "Ankle pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_79",
+            "name": "Joint pain, hallux",
+            "common_name": "Big toe pain",
+            "orth": "Big toe pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_125",
+            "name": "Paresthesia in feet",
+            "common_name": "Foot tingling or numbness",
+            "orth": "Feet tingling",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_518",
+            "name": "Paresthesia",
+            "common_name": "Body tingling",
+            "orth": "numbness",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1995",
+            "name": "Edema, feet",
+            "common_name": "Swollen feet",
+            "orth": "Swollen feet",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1997",
+            "name": "Edema, toe",
+            "common_name": "Swollen toe",
+            "orth": "Swollen toe",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1923",
+            "name": "Dermatological changes, feet",
+            "common_name": "Skin changes on feet",
+            "orth": "Skin changes on feet",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_386",
+            "name": "Thickened nails with pits or grooves",
+            "common_name": "Thickened nails with pits or grooves",
+            "orth": "Thickened nails",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1310",
+            "name": "Brown nail discoloration",
+            "common_name": "Brown nail discoloration",
+            "orth": "Brown nail discoloration",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1788",
+            "name": "White nail discoloration",
+            "common_name": "White nail discoloration",
+            "orth": "White nail discoloration",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1789",
+            "name": "Yellow nail discoloration",
+            "common_name": "Yellow nails",
+            "orth": "Yellow nails",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_2196",
+            "name": "Cold feet and toes, unilateral",
+            "common_name": "Cold foot",
+            "orth": "Cold feet",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_2088",
+            "name": "Physical injury symptom",
+            "common_name": "Injury",
+            "orth": "injury",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_2092",
+            "name": "Pain in both feet",
+            "common_name": "Feet pain",
+            "orth": "Feet pain",
+            "choice_id": "present",
+            "type": "symptom"
+        }
+    ].sort(function(a, b){
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+      }));
+
+    const [symptomsEyes, setSymptomsEyes] = useState([
+        {
+            "id": "s_493",
+            "name": "Eye pain",
+            "common_name": "Eye pain",
+            "orth": "Eye pain",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_492",
+            "name": "Red eye",
+            "common_name": "Bloodshot eye",
+            "orth": "Bloodshot eye",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_229",
+            "name": "Erythema",
+            "common_name": "Redness of skin",
+            "orth": "Red",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_72",
+            "name": "Red and stinging conjunctivae",
+            "common_name": "Red and stinging eyes",
+            "orth": "stinging eyes",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1563",
+            "name": "Itching of eyes",
+            "common_name": "Itching of eyes",
+            "orth": "Itchy eye",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_122",
+            "name": "Excessive tear production",
+            "common_name": "Watery eyes",
+            "orth": "Watery eyes",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1492",
+            "name": "Scleral icterus",
+            "common_name": "Yellow eyes",
+            "orth": "Yellow eyes",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_54",
+            "name": "Pain near eye socket",
+            "common_name": "Pain near eye socket",
+            "orth": "Pain near eye socket",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_207",
+            "name": "Diplopia",
+            "common_name": "Double vision",
+            "orth": "Double vision",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1465",
+            "name": "Temporary blindness",
+            "common_name": "Temporary blindness",
+            "orth": "Temporary blindness",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_497",
+            "name": "Anisocoria",
+            "common_name": "Asymmetric pupils",
+            "orth": "Asymmetric pupils",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_241",
+            "name": "Dermatological changes",
+            "common_name": "Skin changes",
+            "orth": "Skin changes",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_483",
+            "name": "Dermatological changes, eyelid",
+            "common_name": "Skin change on eyelid",
+            "orth": "Skin changes on eyelid",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_1442",
+            "name": "Edema, periorbital",
+            "common_name": "Swelling around the eyes",
+            "orth": "Swelling around the eyes",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_192",
+            "name": "Blepharoptosis",
+            "common_name": "Drooping eyelids",
+            "orth": "Drooping eyelids",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_489",
+            "name": "Dry discharge on eyelids",
+            "common_name": "Dry discharge on eyelids",
+            "orth": "Dry discharge on eyelids",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "s_606",
+            "name": "Eye flashes",
+            "common_name": "Eye flashes",
+            "orth": "Eye flashes",
+            "choice_id": "present",
+            "type": "symptom"
+        },
+        {
+            "id": "p_214",
+            "name": "Serious eye injury",
+            "common_name": "Serious eye injury",
+            "orth": "Serious eye injury",
+            "choice_id": "present",
+            "type": "risk_factor"
+        }
+    ].sort(function(a, b){
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+      }));
+
     const [symptomsLowerLegs, setSymptomsLowerLegs] = useState([
       {
           "id": "s_579",
@@ -620,7 +1073,7 @@ export default function Body (){
           <Head choices={choices} setChoices={setChoices} symptomsHead={symptomsHead} setSymptomsHead={setSymptomsHead}></Head>
           <Ears choices={choices} setChoices={setChoices} symptomsEars={symptomsEars} setSymptomsEars={setSymptomsEars} ></Ears>
           <Nose choices={choices} setChoices={setChoices} symptomsNose={symptomsNose} setSymptomsNose={setSymptomsNose}></Nose>
-          <Eyes></Eyes>
+          <Eyes choices={choices} setChoices={setChoices} symptomsLowerEyes={symptomsLowerEyes} setSymptomsLowerEyes={setSymptomsLowerEyes}></Eyes>
           <Mouth></Mouth>
           <Neck choices={choices} setChoices={setChoices} symptomsNeck={symptomsNeck} setSymptomsNeck={setSymptomsNeck}></Neck>
           <UpperArm></UpperArm>
@@ -629,13 +1082,13 @@ export default function Body (){
           <UpperAbdomen></UpperAbdomen>
           <Boobs choices={choices} setChoices={setChoices} symptomsBoobs={symptomsBoobs} setSymptomsBoobs={setSymptomsBoobs}></Boobs>
           <Abdomen></Abdomen>
-          <Hands></Hands>
+          <Hands choices={choices} setChoices={setChoices} symptomsHead={symptomsHead} setSymptomsHead={setSymptomsHead}></Hands>
           <Thighs></Thighs>
           <LowerAbdomen></LowerAbdomen>
           <Shit></Shit>
           <Knees></Knees>
           <LowerLegs choices={choices} setChoices={setChoices} symptomsLowerLegs={symptomsLowerLegs} setSymptomsLowerLegs={setSymptomsLowerLegs}></LowerLegs>
-          <Feet></Feet>
+          <Feet choices={choices} setChoices={setChoices} symptomsFeet={symptomsFeet} setSymptomsFeet={setSymptomsFeet}></Feet>
         </div>
 
       )}
