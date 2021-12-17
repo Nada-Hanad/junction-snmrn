@@ -634,7 +634,7 @@ export default function Body (){
           <LowerAbdomen></LowerAbdomen>
           <Shit></Shit>
           <Knees></Knees>
-          <LowerLegs choices={choices} setChoices={setChoices} symptomsHead={symptomsHead} setSymptomsHead={setSymptomsHead}></LowerLegs>
+          <LowerLegs choices={choices} setChoices={setChoices} symptomsLowerLegs={symptomsLowerLegs} setSymptomsLowerLegs={setSymptomsLowerLegs}></LowerLegs>
           <Feet></Feet>
         </div>
 
