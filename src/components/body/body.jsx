@@ -24,6 +24,7 @@ import { useState } from 'react';
 
 export default function Body (){
     const [turned, setTurned] = useState(false);
+    const [choices, setChoices] = useState([])
 
     return(
         <>
@@ -34,7 +35,7 @@ export default function Body (){
         </div>
       ) : (
         <div className='body-part-front'>
-          <Head></Head>
+          <Head choices={choices} setChoices={setChoices}></Head>
           <Ears></Ears>
           <Nose></Nose>
           <Eyes></Eyes>
@@ -54,6 +55,20 @@ export default function Body (){
           <LowerLegs></LowerLegs>
           <Feet></Feet>
         </div>
-      )}</>
+
+      )}
+      <div className="choices">
+        {choices.map((e)=>{
+          return(<div className="choice-item">
+            <p style={{
+            fontSize:30,
+            fontFamily: 'Montserrat'
+              }} >
+              {e.name}
+            </p>
+          </div> )
+        }) }
+      </div>
+      </>
     )
 }

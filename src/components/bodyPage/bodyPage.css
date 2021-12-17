@@ -1,19 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Montez&family=Pacifico&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montez&family=Poppins:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montez&family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montez&family=Montserrat:wght@100&family=Poppins:wght@100&display=swap');
 .body-page{
     width: 100vw;
-    min-height: 100vh;
+    min-height: 90vh;
     margin: 0;
+    background-image: url("../../assets/BackGnd.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.btn1 {
+        display: grid;
+        place-items: center;
+        width:450px;
+        height:170px;
+        padding:20px;
+        border-radius: 10px;
+        box-shadow: 16px 18px 28px -18px rgba(0,0,0,0.85);
+       
+        background: rgba(108, 169, 212, 1); 
+        
+        
+  }
+  .btn2 {
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    width:450px;
+    height:170px;
+    box-shadow: 16px 18px 28px -18px rgba(0,0,0,0.85);
+    background: rgba(108, 169, 212, 1);
+    
+    
+}
+.h1{
+    margin: 0;
+    font-family: 'Poppins';
+    font-size: medium;
+    
+    vertical-align: center;
+    text-align: center;
+      }
   
-}
-.upper-body-page{
-    padding: 6vh;
-    height: 1vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-family: 'Montez', cursive;
-
-}
-h1,h2,h3,h4,h5,h6,p{
+h2,h3,h4,h5,h6,p{
     margin: 0;
 }

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Montez&family=Montserrat:wght@300&family=Pacifico&family=Poppins:wght@200&display=swap');
+
+
 .body-part-front{
     height:1258px;
     width:604px;
@@ -124,6 +127,19 @@
  
   margin: 0;
 }
-h1{
+h1, p{
   margin:0
+}
+.choices{
+height:20vh;
+width: 50vw;
+}
+.choice-item{
+  padding:20px;
+  width: 15vw;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  border-radius: 25px;
+  border: 1px solid;
 }

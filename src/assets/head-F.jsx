@@ -1,25 +1,14 @@
 import { useState } from "react";
 import * as React from 'react';
 import Popover from '@mui/material/Popover';
-import Box from '@mui/material/Box';
+import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import { FixedSizeList } from 'react-window';
 
-function renderRow(props) {
-    const { index, style } = props;
+
+export default function Head({choices,setChoices}) {
   
-    return (
-      <ListItem style={style} key={index} component="div" disablePadding>
-        <ListItemButton>
-          <ListItemText primary={`Item ${index + 1}`} />
-        </ListItemButton>
-      </ListItem>
-    );
-  }
-export default function Head() {
-    
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleClick = (event) => {
@@ -166,19 +155,35 @@ export default function Head() {
       >
           <div className="popover-content">
 
-          <Box
-      sx={{ width: '100%', height: 400, maxWidth: 360, bgcolor: 'background.paper' }}
+          <List
+      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+      aria-label="contacts"
     >
-      <FixedSizeList
-        height={400}
-        width={360}
-        itemSize={46}
-        itemCount={symptoms.length}
+        {symptoms.map((e)=>{
+            return(
+                <ListItem sx={{
+            fontSize:50
+            }} disablePadding>
+        <ListItemButton onClick={()=>{
+            setSymptoms(
+                symptoms.filter(item => item.name !== e.name)
+            )
+            setChoices([...choices, e])
        
-      >
-        {renderRow}
-      </FixedSizeList>
-    </Box>
+        }}>
+          <ListItemText>
+              <p style={{
+            fontSize:30,
+            fontFamily: 'Montserrat'
+              }}>{e.name}</p>
+          </ListItemText>
+        </ListItemButton>
+      </ListItem>
+            )
+        })}
+      
+     
+    </List>
           </div>
       </Popover>
         </>
