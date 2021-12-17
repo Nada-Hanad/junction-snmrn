@@ -43,7 +43,7 @@ export default function LowerArm({choices,setChoices, symptomsLowerArm, setSympt
          return(
              <ListItem disablePadding>
      <ListItemButton onClick={()=>{
-         setSymptomsLowsymptomsLowerArm(
+         setSymptomsLowerArm(
              symptomsLowerArm.filter(item => item.name !== e.name)
          )
          setChoices([...choices, e])
