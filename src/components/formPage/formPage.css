@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Montez&family=Montserrat:wght@300&family=Pacifico&family=Poppins:wght@200&display=swap');
+
+.form-page{
+    min-height:100vh;
+    width:100vw;
+    background-color: #F0F1F1;
+}
+.upper-form-page{
+    padding: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  
+}
+.info-form{
+    height: 10vh;  
+    display: grid;
+    place-items: center;
+}
+h1{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 80px;
+    margin: 0;
+}
+.form-container{
+    margin-top: 3vh;
+    height: 50vh;
+    padding:70px;
+    background-color: white;
+    width: 80%;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,9 +1,10 @@
 import './App.css';
 import Body from './components/body/body';
+import FormPage from './components/formPage/formPage';
 function App() {
   return (
     <div className='main'>
-      <Body></Body>
+      <FormPage></FormPage>
     </div>
   );
 }
