@@ -1,0 +1,8 @@
+.info {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url("../../assets/screen5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

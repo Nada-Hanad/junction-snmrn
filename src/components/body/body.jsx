@@ -1,4 +1,5 @@
 import './body.css'
+import AutorenewIcon from '@mui/icons-material/Autorenew';
 import Abdomen from '../../assets/abdomen';
 import Back from '../../assets/back';
 import Boobs from '../../assets/boobs';
@@ -21,10 +22,8 @@ import UpperArm from '../../assets/upper-arm';
 import UpperChest from '../../assets/upper-chest';
 import Feet from '../../assets/feet';
 import { useState } from 'react';
-import RestartAltIcon from '@mui/icons-material/RestartAlt';
-export default function Body (){
+export default function Body ({choices, setChoices}){
     const [turned, setTurned] = useState(false);
-    const [choices, setChoices] = useState([]);
 
 
     const [symptomsShit, setSymptomsShit] = useState([
@@ -2222,7 +2221,8 @@ export default function Body (){
     return 0;
 }));
     return(
-        <>
+        <div className="body-container">
+        
         {turned ? (
         <div className='body-part-back'>
           <Back></Back>
@@ -2239,7 +2239,7 @@ export default function Body (){
           <UpperArm choices={choices} setChoices={setChoices} symptomsUpperArm={symptomsUpperArm} setSymptomsUpperArm={setSymptomsUpperArm}></UpperArm>
           <UpperChest choices={choices} setChoices={setChoices} symptomsUpperChest={symptomsUpperChest} setSymptomsUpperChest={setSymptomsUpperChest}></UpperChest>
           <LowerArm choices={choices} setChoices={setChoices} symptomsLowerArm={symptomsLowerArm} setSymptomsLowerArm={setSymptomsLowerArm}></LowerArm>
-          <UpperAbdomen choices={choices} setChoices={setChoices} symptomsUpperAbdomen={symptomsUpperAbdomen} setSymptomsUpperAbdomen={setSymptomsBoobs}></UpperAbdomen>
+          <UpperAbdomen choices={choices} setChoices={setChoices} symptomsUpperAbdomen={symptomsUpperAbdomen} setSymptomsUpperAbdomen={setSymptomsUpperAbdomen}></UpperAbdomen>
           <Boobs choices={choices} setChoices={setChoices} symptomsBoobs={symptomsBoobs} setSymptomsBoobs={setSymptomsBoobs}></Boobs>
           <Abdomen choices={choices} setChoices={setChoices} symptomsAbdomen={symptomsAbdomen} setSymptomsAbdomen={setSymptomsAbdomen}></Abdomen>
           <Hands choices={choices} setChoices={setChoices} symptomsHands={symptomsHands} setSymptomsHands={setSymptomsHands}></Hands>
@@ -2249,26 +2249,13 @@ export default function Body (){
           <Knees choices={choices} setChoices={setChoices} symptomsKnees={symptomsKnees} setSymptomsKnees={setSymptomsKnees}></Knees>
           <LowerLegs choices={choices} setChoices={setChoices} symptomsLowerLegs={symptomsLowerLegs} setSymptomsLowerLegs={setSymptomsLowerLegs}></LowerLegs>
           <Feet choices={choices} setChoices={setChoices} symptomsFeet={symptomsFeet} setSymptomsFeet={setSymptomsFeet}></Feet>
+        
         </div>
 
-      )}
-      <div className="choices">
-        {choices.map((e)=>{
-          return(<div className="choice-item">
-            <p style={{
-            fontSize:40,
-            fontWeight:'bold',
-            fontFamily: 'Montserrat'
-              }} >
-              {e.name}
-            </p>
-           
-          </div> )
-        }) }
-        <RestartAltIcon onClick={()=>{
-
-        }}></RestartAltIcon>
+      )} 
+  
+   <AutorenewIcon onClick={()=>{setTurned(!turned)}} sx={{fontSize:100, color:'#6ba9d4'}}></AutorenewIcon>
+ 
       </div>
-      </>
     )
 }

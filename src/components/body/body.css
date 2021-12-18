@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Montez&family=Montserrat:wght@300&family=Pacifico&family=Poppins:wght@200&display=swap');
 
-
+.body-container{
+  height:80vh;
+  display: flex;
+}
 .body-part-front{
     height:1258px;
     width:604px;
@@ -21,7 +24,7 @@
   .eyes{
     position: relative;
     top: -85px;
-    left: -62px;
+    left: -72px;
   }
   .ears{
     position: relative;
@@ -31,18 +34,18 @@
   .nose {
     position: relative;
     top:-65px;
-    left: -7px;
+    left: -12px;
   
   }
   .mouth{
     position: relative;
     top:-25px;
-    left: -145px;
+    left: -158px;
   }
   .neck{
     position: relative;
     top: 27px;
-    left:-233px
+    left:-253px
   }
   .upper-chest{
     position: relative;
@@ -133,15 +136,4 @@ h1, p{
 .choices{
 height:20vh;
 width: 50vw;
-}
-.choice-item{
-  padding:20px;
-  width: fit-content;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 25px;
-  background-color: #6CA9D4;
-  color:white;
-
 }
