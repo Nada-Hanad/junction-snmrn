@@ -178,28 +178,30 @@ export default function QPage( {age,
                             </p>
                           </>
                           <div>
-                            <div style={{ display: 'flex', flexDirection: 'column' }}>
-                                    <div className='results-tab'>
-                                      <div>
-                                        {conditions.map((e) => (
-                                          <ResultCard condition={e}></ResultCard>
-                                        ))}
-                                      </div>
-                                      <div className='triage'>
-                                        <div className='third-container'></div>
-                                        
-                                      </div>
+                          <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                  <div className='results-tab'>
+                                    <div>
+                                      {conditions.map((e) => (
+                                        <ResultCard condition={e}></ResultCard>
+                                      ))}
                                     </div>
-                                    <div  className="next-button" id='finalNext' >
-                                      <h1 style ={{
-                                          fontFamily:'Poppins',
-                                          fontSize : '60px',
-                                          color:'white',
-                                          margin:0
-                                      }}>Next</h1>
-                                      </div>                 
+                                    <div className='triage'>
+                                      <div className='third-container'></div>
+                                      
+                                    </div>
                                   </div>
-                              </div>
+                                  <div  className="next-button" id='finatNext' >
+                                    <a href="http://localhost:3004/">
+                                    <h1 style ={{
+                                        fontFamily:'Poppins',
+                                        fontSize : '60px',
+                                        color:'white',
+                                        margin:0
+                                    }}>Next</h1>
+                                    </a>
+                                    </div>                 
+                                </div>
+                  </div>
             </>):<div className="q-card">
         {
                 loading? <CircularProgress size="200px"></CircularProgress> : error? <h1>An error has occured try again.</h1> : 
